@@ -1,0 +1,2 @@
+# remove all non-alphanumeric chars except . and ? and ' and -
+[^a-züöäßA-Z0-9?.'\- *~&\[\]]=

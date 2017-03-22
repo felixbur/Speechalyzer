@@ -1,0 +1,19 @@
+\([^\)]*\)=
+#<[^>]*>.=
+#<[^>]*>=
+#\"\"=\"
+\.\.\.=<break time="500ms"/>
+\{= <voice name="ag5co0de-DE22">
+\}= </voice>
+\[= <voice name="ag5co0de-DE22">
+\]= </voice>
+\s\.\s*=
+\s\.=.
+\s, =
+\"\?=\"
+\#= <break time="500ms"/> "
+#Eine=Eine.
+ \"= <break time="300ms"/> "
+, = <break time="500ms"/>
+\�=
+\�=

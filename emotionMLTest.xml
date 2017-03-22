@@ -1,0 +1,41 @@
+<emotionml version="1.0" xmlns="http://www.w3.org/2009/10/emotionml"
+	xmlns:meta="http://www.example.com/metadata" category-set="#myCategories" dimension-set="#myDimensionsB">
+	<info>ORIGINATOR:hartmut;</info>
+	<vocabulary type="category" id="myCategories">
+		<item name="anger" />
+	</vocabulary>
+	<vocabulary type="dimension" id="myDimensionsA">
+		<item name="valence" />
+	</vocabulary>
+	<vocabulary type="dimension" id="myDimensionsB">
+		<item name="potency" />
+	</vocabulary>
+	<emotion>
+		<category name="anger" value="0.82" confidence="0.5" />
+		<reference uri="file:///recordings/2011.01.11-10.27.10.wav"
+			role="expressedBy" />
+		<info>TRANSCRIPTION:was war;ORIGINATOR:felix;</info>
+	</emotion>
+	<emotion>
+		<category name="anger" value="0.2" confidence="0.5" />
+		<reference uri="file:///recordings/2011.01.11-10.27.10.wav"
+			role="expressedBy" />
+		<info>TRANSCRIPTION:was war;ORIGINATOR:felix;</info>
+	</emotion>
+	<emotion dimension-set="#myDimensionsA">
+		<dimension name="valence" value="0.35" confidence="0.5" />
+		<reference uri="file:///recordings/2011.01.11-10.43.52.wav"
+			role="expressedBy" />
+		<info></info>
+	</emotion>
+	<emotion>
+		<dimension name="potency" value="0.12" confidence="0.5" />
+		<reference uri="file:///recordings/2011.01.11-10.43.59.wav"
+			role="expressedBy" />
+	</emotion>
+	<emotion category-set="http://localhost/emotionVocab.xml#big6">
+		<category name="anger" value="0.53" confidence="0.5" />
+		<reference uri="file:///recordings/2011.01.11-10.44.19.wav"
+			role="expressedBy" />
+	</emotion>
+</emotionml>
