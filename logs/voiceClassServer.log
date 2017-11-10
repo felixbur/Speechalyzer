@@ -1,0 +1,35 @@
+13.Jul.17 16:34:29 INFO  com.tlabs.speechalyzer.Speechalyzer - Speechalyzer 2.1
+13.Jul.17 16:34:29 INFO  com.tlabs.speechalyzer.classifier.WEKAClassifier - loading model from file /home/felix/workspace/Speechalyzer/res/classifierAnger_smo.model...
+13.Jul.17 16:34:29 INFO  com.tlabs.speechalyzer.AudioFileManager - loading audio files from /home/felix/data/audio/angerIronyDB/audio...
+13.Jul.17 16:34:29 INFO  com.tlabs.speechalyzer.AudioFileManager - AFM: added ALL: #files: 0, 0 bytes (0 kb, 0 mb), secs: 0, mins: 0.0, hours: 0.0, avr sec: 0.0, ANGER: #files: 0, 0 bytes (0 kb, 0 mb), secs: 0, mins: 0.0, hours: 0.0, avr sec: 0.0
+
+13.Jul.17 16:34:29 INFO  com.tlabs.speechalyzer.AudioFileManager - loading audio files from /home/felix/data/audio/angerIronyDB/audio...
+13.Jul.17 16:34:29 INFO  com.tlabs.speechalyzer.AudioFileManager - AFM: added ALL: #files: 977, 133079040 bytes (133079 kb, 133 mb), secs: 4158, mins: 69.3, hours: 1.16, avr sec: 4.26, ANGER: #files: 0, 0 bytes (0 kb, 0 mb), secs: 0, mins: 0.0, hours: 0.0, avr sec: 0.0
+
+13.Jul.17 16:34:50 INFO  com.tlabs.speechalyzer.Speechalyzer - Connection with: /127.0.0.1
+13.Jul.17 16:34:50 INFO  com.tlabs.speechalyzer.Speechalyzer - Modus: send filelist
+13.Jul.17 16:34:50 INFO  com.tlabs.speechalyzer.AudioFileManager - loading audio files from /home/felix/data/audio/angerIronyDB/audio...
+13.Jul.17 16:34:50 INFO  com.tlabs.speechalyzer.AudioFileManager - AFM: added ALL: #files: 977, 133079040 bytes (133079 kb, 133 mb), secs: 4158, mins: 69.3, hours: 1.16, avr sec: 4.26, ANGER: #files: 0, 0 bytes (0 kb, 0 mb), secs: 0, mins: 0.0, hours: 0.0, avr sec: 0.0
+
+13.Jul.17 16:34:54 INFO  com.tlabs.speechalyzer.Speechalyzer - Connection with: /127.0.0.1
+13.Jul.17 16:34:54 INFO  com.tlabs.speechalyzer.Speechalyzer - Modus: playing
+13.Jul.17 16:34:54 INFO  com.tlabs.speechalyzer.Speechalyzer - playing from _file _name: transaction_5wGtNHQA_job_1115.wav
+13.Jul.17 16:35:04 INFO  com.tlabs.speechalyzer.Speechalyzer - Connection with: /127.0.0.1
+13.Jul.17 16:35:04 INFO  com.tlabs.speechalyzer.Speechalyzer - Modus: playing
+13.Jul.17 16:35:04 INFO  com.tlabs.speechalyzer.Speechalyzer - playing from _file _name: transaction_5wGtNHQA_job_1115.wav
+13.Jul.17 16:35:08 INFO  com.tlabs.speechalyzer.Speechalyzer - Connection with: /127.0.0.1
+13.Jul.17 16:35:08 INFO  com.tlabs.speechalyzer.Speechalyzer - Modus: playing
+13.Jul.17 16:35:08 INFO  com.tlabs.speechalyzer.Speechalyzer - playing from _file _name: transaction_o5Xt8HrE_job_1510.wav
+13.Jul.17 16:35:23 INFO  com.tlabs.speechalyzer.Speechalyzer - Connection with: /127.0.0.1
+13.Jul.17 16:35:23 INFO  com.tlabs.speechalyzer.Speechalyzer - Modus: playing
+13.Jul.17 16:35:23 INFO  com.tlabs.speechalyzer.Speechalyzer - playing from _file _name: transaction_AG6UmHG4_job_1571.wav
+10.Nov.17 14:03:22 INFO  com.tlabs.speechalyzer.Speechalyzer - Speechalyzer 2.1
+10.Nov.17 14:03:22 INFO  com.tlabs.speechalyzer.classifier.WEKAClassifier - loading model from file /home/felix/workspace/Speechalyzer/res/classifierAnger_smo.model...
+10.Nov.17 14:03:22 INFO  com.tlabs.speechalyzer.AudioFileManager - loading audio files from recordings...
+10.Nov.17 14:03:22 INFO  com.tlabs.speechalyzer.AudioFileManager - AFM: added ALL: #files: 1, 37952 bytes (37 kb, 0 mb), secs: 2, mins: 0.03, hours: 0.0, avr sec: 2.0, ANGER: #files: 0, 0 bytes (0 kb, 0 mb), secs: 0, mins: 0.0, hours: 0.0, avr sec: 0.0
+
+10.Nov.17 14:05:41 INFO  com.tlabs.speechalyzer.Speechalyzer - Speechalyzer 2.1
+10.Nov.17 14:05:41 INFO  com.tlabs.speechalyzer.classifier.WEKAClassifier - loading model from file /home/felix/workspace/Speechalyzer/res/classifierAnger_smo.model...
+10.Nov.17 14:05:41 INFO  com.tlabs.speechalyzer.AudioFileManager - loading audio files from recordings...
+10.Nov.17 14:05:41 INFO  com.tlabs.speechalyzer.AudioFileManager - AFM: added ALL: #files: 1, 37952 bytes (37 kb, 0 mb), secs: 2, mins: 0.03, hours: 0.0, avr sec: 2.0, ANGER: #files: 0, 0 bytes (0 kb, 0 mb), secs: 0, mins: 0.0, hours: 0.0, avr sec: 0.0
+

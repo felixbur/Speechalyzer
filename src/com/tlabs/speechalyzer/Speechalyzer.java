@@ -1,18 +1,26 @@
 package com.tlabs.speechalyzer;
 
-import java.io.*;
-import java.net.*;
+import java.io.BufferedReader;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintStream;
+import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Vector;
+
 import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
-
-import psk.cmdline.ApplicationSettings;
-import psk.cmdline.BooleanToken;
-import psk.cmdline.StringToken;
-import psk.cmdline.TokenOptions;
 
 import com.felix.util.AudioUtil;
 import com.felix.util.FileUtil;
@@ -22,9 +30,6 @@ import com.felix.util.StringUtil;
 import com.felix.util.Util;
 import com.felix.util.logging.Log4JLogger;
 import com.felix.util.logging.LoggerInterface;
-
-import dk.dren.hunspell.Hunspell;
-import dk.dren.hunspell.Hunspell.Dictionary;
 import com.tlabs.speechalyzer.classifier.Categories;
 import com.tlabs.speechalyzer.classifier.ClassificationResult;
 import com.tlabs.speechalyzer.classifier.EvaluatorThread;
@@ -34,6 +39,13 @@ import com.tlabs.speechalyzer.featureextract.IExtractor;
 import com.tlabs.speechalyzer.featureextract.OpenEarExtractor;
 import com.tlabs.speechalyzer.featureextract.PraatExtractor;
 import com.tlabs.speechalyzer.util.EmlUtils;
+
+import dk.dren.hunspell.Hunspell;
+import dk.dren.hunspell.Hunspell.Dictionary;
+import psk.cmdline.ApplicationSettings;
+import psk.cmdline.BooleanToken;
+import psk.cmdline.StringToken;
+import psk.cmdline.TokenOptions;
 
 /**
  * The main class for the recording server. The server is implemented as a
@@ -86,6 +98,7 @@ public class Speechalyzer extends Thread {
 	private AudioFileManager _afm;
 	private File _recordingDir;
 	public int _port = 0;
+	public String _host = "127.0.0.1";
 	private String _charEnc;
 	int neutralThreshold = 100;
 	public static KeyValues _config;
@@ -132,6 +145,8 @@ public class Speechalyzer extends Thread {
 		_aps.addToken(sampleRate);
 		StringToken port = new StringToken("port", "Set port number, e.g. 6666", "", TokenOptions.optDefault, "");
 		_aps.addToken(port);
+		StringToken host = new StringToken("host", "Set host ip, e.g. 127.0.0.1", "", TokenOptions.optDefault, "");
+		_aps.addToken(host);
 		BooleanToken pe = new BooleanToken("pe",
 				"Print evaluation format to stdout.\n\t\tFormat: filepath <string label> <prediction category>.\n", "",
 				TokenOptions.optSwitch, false);
@@ -287,6 +302,11 @@ public class Speechalyzer extends Thread {
 			_port = Integer.parseInt(port.getValue());
 		} else {
 			_port = Integer.parseInt(_config.getString("port"));
+		}
+		if (host.getValue().length() > 0) {
+			_host = host.getValue();
+		} else {
+			_host = _config.getString("host");
 		}
 		if (audioFormat.getValue().length() > 0 || sampleRate.getValue().length() > 0) {
 			_afm.reload();
@@ -470,7 +490,7 @@ public class Speechalyzer extends Thread {
 		 * Start a socket server listening on port 6666.
 		 */
 		try {
-			_serversocket = new ServerSocket(_port);
+			_serversocket = new ServerSocket(_port, 0, InetAddress.getByName(_host));
 			System.out.println("Speechalyzer " + Constants.version + " started: " + _serversocket);
 			if (!_config.getBool("withSpellChecker")) {
 				System.out.println("spellchecker disabled");
