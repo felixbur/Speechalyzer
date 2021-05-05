@@ -1,6 +1,8 @@
 ﻿Speechalyzer: a tool for the daily work of a 'speech worker'.
  
  For a first glance you [might look at this presentation](https://github.com/felixbur/Speechalyzer/blob/master/docs/Labeltool_Usage.pdf)
+ 
+ I wrote a [blog post on how to install Speechalyzer and Labeltool](http://blog.syntheticspeech.de/2021/05/05/how-to-install-speechalyzer-labeltool/)
 
 NOTE: if you want to label data, you probably will need to use the 'Labeltool' project as well.
 it can be installed/downloaded here https://github.com/felixbur/Labeltool
